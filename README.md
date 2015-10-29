@@ -1,7 +1,7 @@
 # Vagrant with python 3, django and postgres
 ## Follow the steps
 
-In shell you go to desired project dir.
+In shell you go to desired, freshly made project dir and clone this repository.
 
 In shell you do:
 ```
