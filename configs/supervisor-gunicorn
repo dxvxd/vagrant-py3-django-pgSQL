@@ -1,0 +1,8 @@
+[program:gunicorn]
+command=/home/vagrant/.virtualenvs/project_name/bin/gunicorn --bind 0.0.0.0 project_name.wsgi --reload
+directory=/vagrant/project_name
+user=vagrant
+autostart=true
+autorestart=true
+stderr_logfile=/vagrant/gunicorn.err.log
+stdout_logfile=/vagrant/gunicorn.out.log
