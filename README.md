@@ -1,4 +1,10 @@
 # Vagrant with python 3, django and postgres
+
+Important note:
+
+In configuration files and everywhere you see **project_name**, replace it with more comfortable name (without underscores)!
+
+
 ## Follow the steps
 
 In shell you go to desired, freshly made project dir and clone this repository.
@@ -44,3 +50,23 @@ On host machine, fill the /etc/hosts with one more line:
 ```
 
 Open browser, go to the http://project_name.dev and you should see django error page.
+
+## Postgres setup
+
+This should be very simple. Inside your vagrant box just type following:
+```
+sudo -u postgres psql postgres
+```
+
+You are in postgres client console now. Set password for _postgres_ user:
+```
+\password postgres
+```
+Answer obvius questions by typing letters not to be seen, and then quit by typing `\q`.
+
+Create project database with:
+```
+sudo -u postgres createdb <project_database_name>
+```
+
+That's all.
